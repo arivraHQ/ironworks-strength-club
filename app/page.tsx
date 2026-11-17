@@ -4,6 +4,7 @@ import Marquee from "@/components/Marquee";
 import Programs from "@/components/Programs";
 import Coaches from "@/components/Coaches";
 import Transformations from "@/components/Transformations";
+import Pricing from "@/components/Pricing";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Programs />
       <Coaches />
       <Transformations />
+      <Pricing />
     </main>
   );
 }

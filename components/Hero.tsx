@@ -58,13 +58,14 @@ export default function Hero() {
         </div>
 
         {/* Giant Stacked Headline: Cropped by edges */}
-        <div className="select-none py-1">
+        <div className="select-none py-1 h-[120px] sm:h-[190px] md:h-[240px] lg:h-[290px] xl:h-[320px]">
           {/* Line 1: BUILT, */}
-          <div className="overflow-hidden pb-1 pt-1">
+          <div className="overflow-hidden pb-1 pt-1 h-[56px] sm:h-[90px] md:h-[115px] lg:h-[140px] xl:h-[155px] flex items-center">
             <motion.div
-              initial={{ y: "100%" }}
-              animate={{ y: "0%" }}
+              initial={{ y: "100%", opacity: 0 }}
+              animate={{ y: "0%", opacity: 1 }}
               transition={{ duration: 0.6, ease: customEasing }}
+              className="will-change-transform"
             >
               <h1 className="font-heading text-[56px] sm:text-[90px] md:text-[115px] lg:text-[140px] xl:text-[155px] leading-[0.88] font-black uppercase tracking-tight text-text -ml-1">
                 BUILT,
@@ -73,11 +74,12 @@ export default function Hero() {
           </div>
 
           {/* Line 2: NOT GIVEN. */}
-          <div className="overflow-hidden pb-1 pt-1">
+          <div className="overflow-hidden pb-1 pt-1 h-[56px] sm:h-[90px] md:h-[115px] lg:h-[140px] xl:h-[155px] flex items-center">
             <motion.div
-              initial={{ y: "100%" }}
-              animate={{ y: "0%" }}
+              initial={{ y: "100%", opacity: 0 }}
+              animate={{ y: "0%", opacity: 1 }}
               transition={{ duration: 0.6, ease: customEasing, delay: 0.08 }}
+              className="will-change-transform"
             >
               <h1 className="font-heading text-[56px] sm:text-[90px] md:text-[115px] lg:text-[140px] xl:text-[155px] leading-[0.88] font-black uppercase tracking-tight text-primary -ml-1">
                 NOT GIVEN.

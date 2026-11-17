@@ -24,8 +24,8 @@ async function capture() {
     // Wait for animations and web fonts to complete render
     await new Promise((r) => setTimeout(r, 1500));
     await page.screenshot({
-      path: path.join(outputDir, "hero-desktop-1440.png"),
-      fullPage: false,
+      path: path.join(outputDir, "fullpage-desktop-1440.png"),
+      fullPage: true,
     });
     await page.close();
   }
@@ -35,10 +35,10 @@ async function capture() {
     const page = await browser.newPage();
     await page.setViewport({ width: 375, height: 812, deviceScaleFactor: 2 });
     await page.goto("http://localhost:3000", { waitUntil: "networkidle0" });
-    await new Promise((r) => setTimeout(r, 1500));
+    await new Promise((r) => setTimeout(r, 1200));
     await page.screenshot({
-      path: path.join(outputDir, "hero-mobile-375.png"),
-      fullPage: false,
+      path: path.join(outputDir, "fullpage-mobile-375.png"),
+      fullPage: true,
     });
     await page.close();
   }

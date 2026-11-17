@@ -24,11 +24,11 @@ export default function Navbar() {
           href="/"
           className="flex items-center gap-3 px-4 md:px-8 border-r-2 border-hairline group hover:bg-[#161614] transition-colors"
         >
-          <img
+          {/* <img
             src="/logo.jpg"
             alt="IRONWORKS Logo"
             className="w-9 h-9 md:w-11 md:h-11 object-contain border border-hairline group-hover:border-primary transition-colors"
-          />
+          /> */}
           <div className="flex flex-col">
             <span className="font-heading text-2xl md:text-3xl font-black tracking-tight text-text leading-none group-hover:text-primary transition-colors">
               IRONWORKS

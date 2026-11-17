@@ -3,6 +3,9 @@
 > **Boutique Design Studio Portfolio Piece**  
 > *A raw, disciplined, no-nonsense strength and conditioning web experience built with brutalist athletic editorial precision.*
 
+🌐 **Live Production URL**: [https://ironworks-demo.arivra.com](https://ironworks-demo.arivra.com)  
+⚡ **Vercel Mirror**: [https://ironworks-demo.vercel.app](https://ironworks-demo.vercel.app)  
+
 ---
 
 ## 🏛️ Brand & Concept
@@ -72,18 +75,34 @@
 ## 💻 Tech Stack & Getting Started
 
 ```bash
+# Clone the repository
+git clone https://github.com/arivraHQ/ironworks-strength-club.git
+cd gym-setup-sample
+
 # Install dependencies
 npm install
 
 # Run development server
 npm run dev
+```
 
+Open [http://localhost:3000](http://localhost:3000) for local development, or view the live deployment at [https://ironworks-demo.arivra.com](https://ironworks-demo.arivra.com).
+
+### Production Build
+```bash
 # Build production bundle
 npm run build
 
 # Start production server
 npm start
 ```
+
+---
+
+## 🌐 Live Deployments
+
+- **Custom Domain (Cloudflare DNS)**: [https://ironworks-demo.arivra.com](https://ironworks-demo.arivra.com)
+- **Vercel Production Mirror**: [https://ironworks-demo.vercel.app](https://ironworks-demo.vercel.app)
 
 ---
 

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Archivo:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0C0C0B;
+  --surface: #161614;
+  --text: #F1EEE6;
+  --primary: #D4FF3A;
+  --accent: #FF5A1F;
+  --muted: #8B8B84;
+  --font-big-shoulders: 'Big Shoulders Display', sans-serif;
+  --font-archivo: 'Archivo', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 !important; /* Strict Radius 0 everywhere */
+}
+
+html {
+  background-color: #0C0C0B;
+  color: #F1EEE6;
+  font-family: var(--font-archivo), sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #0C0C0B;
+  color: #F1EEE6;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Film grain overlay */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Custom selection */
+::selection {
+  background-color: #D4FF3A;
+  color: #0C0C0B;
+}
+
+/* Brutalist Hairline Borders */
+.border-hairline {
+  border-color: rgba(241, 238, 230, 0.14);
+}
+
+.border-hairline-b {
+  border-bottom: 1px solid rgba(241, 238, 230, 0.14);
+}
+
+.border-hairline-t {
+  border-top: 1px solid rgba(241, 238, 230, 0.14);
+}
+
+.border-hairline-r {
+  border-right: 1px solid rgba(241, 238, 230, 0.14);
+}
+
+.border-hairline-l {
+  border-left: 1px solid rgba(241, 238, 230, 0.14);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

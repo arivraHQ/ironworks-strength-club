@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { COACHES } from "@/content/site";
 
 export default function Coaches() {
@@ -44,21 +45,22 @@ export default function Coaches() {
             </div>
 
             {/* Grayscale to Color Image Slot */}
-            {/* 
-              IMAGE BRIEF:
-              {headCoach.imageBrief}
-            */}
-            <div className="mt-6 aspect-[16/10] w-full bg-[#181816] border-2 border-hairline relative overflow-hidden grayscale group-hover:grayscale-0 group-hover:border-primary transition-all duration-500">
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-gradient-to-t from-bg via-surface/70 to-transparent">
-                <span className="font-heading text-4xl md:text-5xl font-black tracking-tight text-text/80 group-hover:text-primary transition-colors">
+            <div className="mt-6 aspect-[16/10] w-full bg-[#181816] border-2 border-hairline relative overflow-hidden group-hover:border-primary transition-all duration-500">
+              <Image
+                src="/images/coach-vikram.jpg"
+                alt="Head Coach Vikram Rathore"
+                fill
+                sizes="(max-width: 1024px) 100vw, 60vw"
+                className="object-cover object-top grayscale contrast-125 brightness-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent opacity-80" />
+              <div className="absolute bottom-4 left-4 right-4 z-10 flex items-center justify-between pointer-events-none">
+                <span className="font-heading text-2xl md:text-3xl font-black tracking-tight text-text">
                   VIKRAM RATHORE
                 </span>
-                <span className="font-body text-xs font-bold text-muted tracking-widest mt-1">
-                  {headCoach.credentials}
+                <span className="px-2 py-0.5 bg-primary text-bg font-body text-[10px] font-black uppercase tracking-widest">
+                  IPF GOLD
                 </span>
-                <p className="font-body text-[11px] text-muted/70 max-w-md mt-2 italic">
-                  "{headCoach.bio}"
-                </p>
               </div>
             </div>
 
@@ -97,17 +99,16 @@ export default function Coaches() {
               </span>
             </div>
 
-            {/* Image Brief Slot */}
-            {/* 
-              IMAGE BRIEF:
-              {coachPriya.imageBrief}
-            */}
-            <div className="mt-4 aspect-[21/9] w-full bg-[#1F1F1D] border-2 border-hairline relative overflow-hidden grayscale group-hover:grayscale-0 group-hover:border-primary transition-all duration-500">
-              <div className="absolute inset-0 flex items-center justify-center p-4 bg-surface/75 text-center">
-                <span className="font-body text-xs text-muted font-bold tracking-wider uppercase">
-                  {coachPriya.credentials}
-                </span>
-              </div>
+            {/* Image Slot */}
+            <div className="mt-4 aspect-[21/9] w-full bg-[#1F1F1D] border-2 border-hairline relative overflow-hidden group-hover:border-primary transition-all duration-500">
+              <Image
+                src="/images/coach-priya.jpg"
+                alt="Coach Priya Kannojia"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover object-top grayscale contrast-125 brightness-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent opacity-80" />
             </div>
 
             <h3 className="font-heading text-2xl md:text-3xl font-black uppercase tracking-tight text-text mt-4 group-hover:text-primary transition-colors leading-tight">
@@ -127,14 +128,15 @@ export default function Coaches() {
                   {coachAmit.experience}
                 </span>
 
-                {/* 
-                  IMAGE BRIEF:
-                  {coachAmit.imageBrief}
-                */}
-                <div className="mt-3 aspect-video w-full bg-[#181816] border border-hairline relative overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500 flex items-center justify-center p-2 text-center">
-                  <span className="font-body text-[10px] text-muted font-bold tracking-wider uppercase">
-                    FUNCTIONAL ENGINE LEAD
-                  </span>
+                <div className="mt-3 aspect-video w-full bg-[#181816] border border-hairline relative overflow-hidden group-hover:border-primary transition-all duration-500">
+                  <Image
+                    src="/images/coach-amit.jpg"
+                    alt="Coach Amit Shukla"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 20vw"
+                    className="object-cover object-top grayscale contrast-125 brightness-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent opacity-80" />
                 </div>
 
                 <h3 className="font-heading text-xl md:text-2xl font-black uppercase tracking-tight text-text mt-3 group-hover:text-primary transition-colors leading-tight">
@@ -156,14 +158,15 @@ export default function Coaches() {
                   {coachDevendra.experience}
                 </span>
 
-                {/* 
-                  IMAGE BRIEF:
-                  {coachDevendra.imageBrief}
-                */}
-                <div className="mt-3 aspect-video w-full bg-[#141412] border border-hairline relative overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500 flex items-center justify-center p-2 text-center">
-                  <span className="font-body text-[10px] text-muted font-bold tracking-wider uppercase">
-                    MOBILITY & REHAB SPECIALIST
-                  </span>
+                <div className="mt-3 aspect-video w-full bg-[#141412] border border-hairline relative overflow-hidden group-hover:border-primary transition-all duration-500">
+                  <Image
+                    src="/images/coach-devendra.jpg"
+                    alt="Coach Devendra Yadav"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 20vw"
+                    className="object-cover object-top grayscale contrast-125 brightness-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent opacity-80" />
                 </div>
 
                 <h3 className="font-heading text-xl md:text-2xl font-black uppercase tracking-tight text-text mt-3 group-hover:text-primary transition-colors leading-tight">

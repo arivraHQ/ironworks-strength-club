@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { SITE_CONFIG } from "@/content/site";
 
@@ -16,35 +17,20 @@ export default function Hero() {
         raw unglamorous athletic discipline.
       */}
       <div 
-        className="absolute inset-0 z-0 opacity-25 pointer-events-none mix-blend-luminosity overflow-hidden"
+        className="absolute inset-0 z-0 opacity-35 pointer-events-none overflow-hidden"
         aria-hidden="true"
       >
-        <div className="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-bg/80 z-10" />
-        <svg
-          className="w-full h-full object-cover"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="xMidYMid slice"
-          viewBox="0 0 1440 900"
-        >
-          <defs>
-            <pattern id="knurl" width="16" height="16" patternUnits="userSpaceOnUse">
-              <path d="M0 16 L16 0 M0 0 L16 16" stroke="#8B8B84" strokeWidth="0.75" opacity="0.2" />
-            </pattern>
-            <radialGradient id="heroVignette" cx="50%" cy="50%" r="60%">
-              <stop offset="35%" stopColor="#161614" stopOpacity="0" />
-              <stop offset="100%" stopColor="#0C0C0B" stopOpacity="0.95" />
-            </radialGradient>
-          </defs>
-          <rect width="100%" height="100%" fill="#121210" />
-          <rect width="100%" height="100%" fill="url(#knurl)" />
-          {/* Heavy Steel Barbell Silhouette on Platforms */}
-          <line x1="80" y1="560" x2="1360" y2="560" stroke="#F1EEE6" strokeWidth="8" opacity="0.35" />
-          <rect x="220" y="470" width="30" height="180" fill="#242422" stroke="#484842" strokeWidth="2" />
-          <rect x="256" y="450" width="40" height="220" fill="#1C1C1A" stroke="#484842" strokeWidth="2" />
-          <rect x="1144" y="450" width="40" height="220" fill="#1C1C1A" stroke="#484842" strokeWidth="2" />
-          <rect x="1190" y="470" width="30" height="180" fill="#242422" stroke="#484842" strokeWidth="2" />
-          <rect width="100%" height="100%" fill="url(#heroVignette)" />
-        </svg>
+        <Image
+          src="/images/hero-barbell.jpg"
+          alt="Raw knurled steel barbell plates on lifting platform"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover grayscale contrast-125 brightness-75 scale-105"
+        />
+        {/* Brutalist dark gradients over image */}
+        <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/60 to-bg/85" />
+        <div className="absolute inset-0 bg-gradient-to-r from-bg via-transparent to-bg/90" />
       </div>
 
       {/* Main Content Area */}

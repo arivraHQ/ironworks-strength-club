@@ -1,7 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { TRANSFORMATIONS } from "@/content/site";
+
+const caseImages = [
+  "/images/case-rahul.jpg",
+  "/images/case-ananya.jpg",
+  "/images/case-kunal.jpg",
+];
 
 const caseImageBriefs = [
   {
@@ -112,17 +119,24 @@ export default function Transformations() {
             <div className="relative mt-6 aspect-[4/3] w-full bg-[#121210] border-2 border-hairline overflow-hidden select-none">
               {/* "AFTER" Underneath */}
               <div className="absolute inset-0 bg-[#1A1A17] flex flex-col items-center justify-center p-6 text-center">
-                <span className="px-3 py-1 bg-primary text-bg font-body text-xs font-black tracking-widest uppercase mb-3">
-                  TESTED AFTER ({activeCase.timeframe})
-                </span>
-                <h4 className="font-heading text-4xl sm:text-5xl font-black text-text uppercase tracking-tight">
-                  {activeCase.metric}
-                </h4>
-                <p className="font-body text-xs text-text/80 max-w-sm mt-3 leading-relaxed">
-                  {activeCase.resultState}
-                </p>
-                <div className="mt-4 p-2 bg-bg/80 border border-hairline max-w-xs text-[10px] text-muted font-body">
-                  Brief: {activeBrief.after}
+                <Image
+                  src={caseImages[activeIdx]}
+                  alt={`${activeCase.name} loaded strength capacity`}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 60vw"
+                  className="object-cover grayscale contrast-125 brightness-75 scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/40 to-bg/80" />
+                <div className="relative z-10">
+                  <span className="px-3 py-1 bg-primary text-bg font-body text-xs font-black tracking-widest uppercase mb-3 inline-block shadow-hard-lime">
+                    TESTED AFTER ({activeCase.timeframe})
+                  </span>
+                  <h4 className="font-heading text-4xl sm:text-5xl font-black text-text uppercase tracking-tight">
+                    {activeCase.metric}
+                  </h4>
+                  <p className="font-body text-xs text-text max-w-sm mt-3 leading-relaxed drop-shadow">
+                    {activeCase.resultState}
+                  </p>
                 </div>
               </div>
 
@@ -131,17 +145,24 @@ export default function Transformations() {
                 className="absolute inset-0 bg-[#141412] flex flex-col items-center justify-center p-6 text-center border-r-2 border-primary overflow-hidden"
                 style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
               >
-                <span className="px-3 py-1 bg-surface border border-hairline text-text font-body text-xs font-black tracking-widest uppercase mb-3">
-                  INTAKE BASELINE (DAY 1)
-                </span>
-                <h4 className="font-heading text-4xl sm:text-5xl font-black text-muted uppercase tracking-tight">
-                  INITIAL STATE
-                </h4>
-                <p className="font-body text-xs text-text/70 max-w-sm mt-3 leading-relaxed">
-                  {activeCase.startingState}
-                </p>
-                <div className="mt-4 p-2 bg-bg/80 border border-hairline max-w-xs text-[10px] text-muted font-body">
-                  Brief: {activeBrief.before}
+                <Image
+                  src={caseImages[activeIdx]}
+                  alt={`${activeCase.name} intake baseline`}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 60vw"
+                  className="object-cover grayscale blur-[2px] brightness-50 scale-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/70 to-bg/90" />
+                <div className="relative z-10">
+                  <span className="px-3 py-1 bg-surface border border-hairline text-accent font-body text-xs font-black tracking-widest uppercase mb-3 inline-block">
+                    INTAKE BASELINE (DAY 1)
+                  </span>
+                  <h4 className="font-heading text-4xl sm:text-5xl font-black text-muted uppercase tracking-tight">
+                    INITIAL STATE
+                  </h4>
+                  <p className="font-body text-xs text-text/70 max-w-sm mt-3 leading-relaxed">
+                    {activeCase.startingState}
+                  </p>
                 </div>
               </div>
 

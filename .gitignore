@@ -42,3 +42,5 @@ next-env.d.ts
 GEMINI.md
 AGENTS.md
 .agents/
+.gemini/
+*.agent*
